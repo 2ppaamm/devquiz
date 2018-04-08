@@ -2,7 +2,7 @@
 	var	app = angular.module('mathQuiz', ['katex','auth0', 'angular-storage', 'angular-jwt', 'ngRoute','ngLoadingSpinner']);
 	app.controller('QuizController',
 	 ['$scope', '$http', '$sce', 'auth', 'store', 'katexConfig','$window', function($scope, $http, $sce, auth, store, katexConfig,$window){
-//		$scope.baseurl = "http://prodquizapi.pamelalim.me"
+//		$scope.baseurl = "http://api.pamelalim.me"
 		$scope.baseurl = "http://localhost:8000"
 		$scope.score = 0;
 		$scope.activeQuestion = -1;
@@ -154,7 +154,8 @@
 			store.remove('profile');
 			store.remove('token');
 			auth.signout();
-			$window.location.href="http://quiz.all-gifted.com";
+//			$window.location.href="http://quiz.all-gifted.com";
+			$window.location.href="http://quiz.pamelalim.me";
 		};
 		
 		$scope.selectAnswer = function(qIndex, aIndex){	
@@ -268,7 +269,7 @@
 
 	app.config( function(authProvider, $httpProvider, jwtInterceptorProvider, jwtOptionsProvider) {
 		authProvider.init({
-			domain: 'pamelalim.auth0.com',
+		domain: 'pamelalim.auth0.com',
 			clientID: 'eVJv6UFM9GVdukBWiURczRCxmb6iaUYG'
 //		    domain: 'allgiftedllc.au.auth0.com',
 //		    clientID: 'bs3jSKz2Ewrye8dD2qRVrD0Tra2tOqHC'
@@ -278,7 +279,7 @@
 			return store.get('token');
 		}
 	    jwtOptionsProvider.config({
-	      whiteListedDomains: ['math.all-gifted.com', 'localhost','quiz.all-gifted.com', 'prodquizapi.pamelalim.me', 'prodquiz.pamelalim.me']
+	      whiteListedDomains: ['math.all-gifted.com', 'localhost','localhost:4200' ,'localhost:8000','quiz.all-gifted.com', 'quizapi.pamelalim.me','api.pamelalim.me','prodquizapi.pamelalim.me', 'prodquiz.pamelalim.me']
 	    });
 		$httpProvider.interceptors.push('jwtInterceptor');
 	});

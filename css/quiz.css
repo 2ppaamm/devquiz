@@ -16,7 +16,7 @@ body { background-color: #fff; width:100%; }
     -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 #mathQuiz .header{ z-index:999;}
-#mathQuiz .literally { width:100%; height: 1500px; bottom:0; background: white url(/paper.jpg) no-repeat;background-size:100% 100%;}
+#mathQuiz .literally { width:100%; height: 1500px; bottom:0; background: white url(../paper.jpg) no-repeat;background-size:100% 100%;}
 #mathQuiz .lc-clear {position:fixed !important; top:0px !important; left:0px; background-color: #960000;color:white;}
 #mathQuiz .literally .lc-picker { top:25px;border-right: none; background-color: rgba(0,0,0,0.05); width:30px; position:fixed;}
 #mathQuiz .literally .color-well { width:30px; }
