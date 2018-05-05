@@ -3,7 +3,7 @@
 	app.controller('QuizController',
 	 ['$scope', '$http', '$sce', 'auth', 'store', 'katexConfig','$window', function($scope, $http, $sce, auth, store, katexConfig,$window){
 //		$scope.baseurl = "http://api.pamelalim.me"
-		$scope.baseurl = "http://localhost:8000"
+		$scope.baseurl = "http://api.pamelalim.me"
 		$scope.score = 0;
 		$scope.activeQuestion = -1;
 		$scope.activeQuestionAnswered = 0;
