@@ -279,7 +279,7 @@
 			return store.get('token');
 		}
 	    jwtOptionsProvider.config({
-	      whiteListedDomains: ['math.all-gifted.com', 'localhost','localhost:4200' ,'localhost:8000','quiz.all-gifted.com', 'quizapi.pamelalim.me','api.pamelalim.me','prodquizapi.pamelalim.me', 'prodquiz.pamelalim.me']
+	      whiteListedDomains: ['math.all-gifted.com', 'localhost','localhost:4200' ,'localhost:8000','quiz.all-gifted.com', 'quizapi.pamelalim.me','api.pamelalim.me','prodquizapi.pamelalim.me', 'prodquiz.pamelalim.me','devquiz.pamelalim.me']
 	    });
 		$httpProvider.interceptors.push('jwtInterceptor');
 	});
